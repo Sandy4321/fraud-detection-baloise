@@ -69,3 +69,7 @@ def svcRBFGridsearch(X, y, Test):
 if __name__ == '__main__':
     print np.linspace(1,5,5)
         
+class FakeLearnDetection:
+
+    def isFraud(self):
+        return NotImplemented

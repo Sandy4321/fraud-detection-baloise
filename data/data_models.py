@@ -13,4 +13,7 @@ class DamageCase():
 
 class Person():
 
+    #Implement person data as dictionaries i.e. get them from data_access.person
+    #first the data_access.person class needs to be initialized with profie
+
     data = None

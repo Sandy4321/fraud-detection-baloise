@@ -1,10 +1,10 @@
 from data.data_models import *
 #from detection.rules import RuleDetection
 #from detection.learn import LearnDetection as LearnDetection
-from detection.fake_learn import FakeLearn as LearnDetection
+from detection.learn import FakeLearnDetection as LearnDetection
 
-from data.data_access import DbData as Data
-#from data.data_access import LocalData as Data
+#from data.data_access import DbData as Data
+from data.data_access import LocalData as Data
 
 #Handle "/"
 def handle_root(request, content_len=0, type="GET"):
@@ -44,6 +44,8 @@ def handle_enterpono(request, content_len=0, type="GET"):
 
 # Handle "/personinfo"
 def handle_personinfo(request, content_len=0, type="GET"):
+    #Get pono from url
+    #Case distinciton, get info from Data object
     return NotImplemented
 
 
