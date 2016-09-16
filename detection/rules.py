@@ -20,4 +20,4 @@ class RuleDetection:
             # damage.data['SDERDAT']
 
         # Deckungseinschluss
-        if damage.data[''] ==
+        if damage.data[''] ==]

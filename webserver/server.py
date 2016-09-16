@@ -1,46 +1,42 @@
 import BaseHTTPServer
-from data.data_model import DamageCase
-#from detection.rules import RuleDetection
+from url_handlers import *
 
-class DamageHandler(BaseHTTPServer.BaseHTTPRequestHandler):
+class RequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_POST(self):
         content_len = int(self.headers.getheader('content-length', -1))
+
         if content_len < 0:
             self.send_error(500, "Content length could not be read")
+            return
+
+        #Determine which handler to call
+        if self.path == "/":
+            handle_root(self)
         elif self.path == "/newdamagecase":
-            form_data = self.rfile.read(content_len)
-
-            # Generate DamageCase object
-            damage_case = DamageCase()
-            damage_case.generateFromFormData(form_data)
-
-            self.response_default(form_data)
-            # Detect if some rule applies
-            #rule_detector = RuleDetection()
-            # (fraud, reason) = rule_detector.isFraud(damage_case)
-            # if fraud:
-
-            # else:
-        elif self.path == "/":
-            self.do_GET()
+            handle_newdamagecase(self, content_len, "POST")
+        elif self.path == "/enterpono":
+            handle_enterpono(self, content_len, "POST")
+        elif self.path == "/personinfo":
+            handle_personinfo(self, content_len, "POST")
         else:
-            self.send_error(404, 'File Not Found: %s' % self.path)
-
-
-
+            handle_404(self)
 
     def do_GET(self):
-        if self.path == "/":
-            index_file = open("../frontend/index.html")
-            self.send_response(200)
-            self.send_header('Content-Type', 'text/html')
-            self.end_headers()
-            self.wfile.write(index_file.read())
-            index_file.close()
-        else:
-            self.send_error(404, 'File Not Found: %s' % self.path)
 
-    def response_default(self, data):
+        #Determine which handler to call
+        if self.path == "/":
+            handle_root(self)
+        elif self.path == "/newdamagecase":
+            handle_newdamagecase(self)
+        elif self.path == "/enterpono":
+            handle_enterpono(self)
+        elif self.path == "/personinfo":
+            handle_personinfo(self)
+        else:
+            handle_404(self)
+
+    #Default response sending input back for debug
+    def DBG_response_default(self, data):
         self.send_response(200)
         self.send_header('Content-Type', 'text/html')
         self.end_headers()

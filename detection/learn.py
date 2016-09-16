@@ -6,7 +6,7 @@ import sklearn.linear_model as sklm
 import sklearn.neighbors as skn
 # import data
 
-class Learn:
+class LearnDetection:
 
     # This method wil initialize the model(s) and train them using the data interface
     # The data is expected to be a numpy array of the shape: (n_samples, n_features)
