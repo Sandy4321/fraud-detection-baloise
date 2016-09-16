@@ -6,6 +6,15 @@ import sklearn.linear_model as sklm
 import sklearn.neighbors as skn
 # import data
 
+
+class FakeLearn:
+
+    def isFraud(self, damage):
+        return NotImplemented
+
+
+
+
 class LearnDetection:
 
     # This method wil initialize the model(s) and train them using the data interface
@@ -13,7 +22,7 @@ class LearnDetection:
     def init(self):
         return NotImplemented
 
-    def predict(self, new_sample):
+    def isFraud(self, damage):
         return NotImplemented
 
 # The following functions each implement a gird search over the hyper-parameter
