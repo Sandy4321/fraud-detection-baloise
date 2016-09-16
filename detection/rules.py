@@ -30,7 +30,8 @@ class RuleDetection:
     # investigated by "Versicherungsmenschen"
     def isFraud(self, damage):
 
-Data.khvkkhgkkgk(damage)
+        # if Data.shouldCheckForHagelRule(damage):
+        # @muy: meinsch so? wi da obe? ^^^^^^
         # Rule for Hagel
         if ((damage.data['VERSARTGRP'] == 'MF Kasko' or
             damage.data['VERSARTGRP'] == 'MF Haftpflicht' or
@@ -53,6 +54,7 @@ Data.khvkkhgkkgk(damage)
                 return False, 'Es gab tatsächlich Hagel zu dieser Zeit an diesem Ort'
 
         # Rule for Iphone
+        # if Data.shouldCheckforIphone(damage):
         if (damage.data['VERSARTGRP'] == 'Wertsachen' and
            damage.data['VERSART'] == 'einfacher Diebstahl' and
            damage.data['SDART'] == 'Kombiversicherung Privathaushalt' and
@@ -75,6 +77,7 @@ Data.khvkkhgkkgk(damage)
 
         # Rule for too many "Schadensfälle"
         # Note that we assume that VSNR refers to POLO (which may be wrong)
+        # if Data.shouldCheckforFreqLimit(damage):
 	if (damage.data['VERSARTGRP'] == 'Wertsachen' and
 	    Data.numberOfDamagesWithinLastTwoYears(
 		damage.data['VSNR'],
