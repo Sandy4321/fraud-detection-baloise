@@ -91,3 +91,6 @@ ENV/
 # Data
 *.sql
 split_data/*
+
+# PyCharm
+.idea/*
