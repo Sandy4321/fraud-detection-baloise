@@ -1,8 +1,17 @@
 import BaseHTTPServer
+from data.data_model import DamageCase
 
 class DamageHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_POST(self):
-        self.send_error(500)
+        content_len = int(self.headers.getheader('content-length', -1))
+        if content_len < 0:
+            self.send_error(500, "Content length could not be read")
+        else:
+            form_data = self.rfile.read(content_len)
+            damage_case = DamageCase()
+            damage_case.generateFromFormData(form_data)
+            
+
 
     def do_GET(self):
         if self.path == "/":
