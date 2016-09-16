@@ -2,8 +2,8 @@ import numpy as np
 # import sklearn.cross_validation as skcv
 import sklearn.svm as sksvm
 import sklearn.grid_search as skgs
+import sklearn.linear_model as sklm
 # import data
-from sklearn import linear_model
 
 class Learn:
 
@@ -14,6 +14,14 @@ class Learn:
 
     def predict(self, new_sample):
         return NotImplemented
+
+def logisticRegressionGridSearch(X, y):
+    param_grid = [{'penalty':['l1', 'l2'], 'dual': [False], 'C': np.logspace(-3.20,10), 'solver':['sag']}]
+    grid_search = skgs.GridSearchCV(sklm.LogisticRegression(), param_grid, cv=5)
+    grid_search.fit(X,y)
+    print 'Best Score of Grid Search: ' + str(grid_search.best_score_)
+    print 'Best Params of Grid Search: ' + str(grid_search.best_params_)
+
 
 def svcSIGMOIDGridSearch(X, y, Test):
     param_grid = [{'C': np.logspace(-3.20,10), 'gamma': np.logspace(-5,3,20), 'kernel': ['sigmoid']}]
