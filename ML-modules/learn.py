@@ -3,6 +3,7 @@ import numpy as np
 import sklearn.svm as sksvm
 import sklearn.grid_search as skgs
 import sklearn.linear_model as sklm
+import sklearn.neighbors as skn
 # import data
 
 class Learn:
@@ -15,8 +16,22 @@ class Learn:
     def predict(self, new_sample):
         return NotImplemented
 
-def SGDClassifierGridSearch(X, y):
-    paramgrid = [{'loss': ['hinge', 'modified_huber', 'squared_hinge', 'perceptron', 'log', 'squared_loss', 'huber', 'epsilon_insensitive', 'squared_epsilon_insensitive'], 'penalty': ['l2', 'l1', 'elasticnet'], 'alpha': ['optimal', '0.0001'], 'epsilon': np.logspace(-3,10,10)}]
+def radNearestNeighborsGridSeach(X,y):
+    param_grid = [{'radius': np.linspace(0.1,2,20), 'weights': ['uniform', 'distance'], 'algorithm':['auto', 'kd_tree'], 'outlier_label':[-1]}]
+    grid_search = skgs.GridSearchCV(skn.RadiusNeighborsClassifier(), param_grid, cv=5)
+    grid_search.fit(X,y)
+    print 'Best Score of Grid Search: ' + str(grid_search.best_score_)
+    print 'Best Params of Grid Search: ' + str(grid_search.best_params_)
+
+def kNearestNeighborsGridSearch(X, y):
+    param_grid = [{'n_neighbors': np.linspace(1,10,10), 'weights': ['uniform', 'distance'], 'algorithm': ['auto']}]
+    grid_search = skgs.GridSearchCV(skn.KNeighborsClassifier(), param_grid, cv=5)
+    grid_search.fit(X,y)
+    print 'Best Score of Grid Search: ' + str(grid_search.best_score_)
+    print 'Best Params of Grid Search: ' + str(grid_search.best_params_)
+
+def sgdClassifierGridSearch(X, y):
+    param_grid = [{'loss': ['hinge', 'modified_huber', 'squared_hinge', 'perceptron', 'log', 'squared_loss', 'huber', 'epsilon_insensitive', 'squared_epsilon_insensitive'], 'penalty': ['l2', 'l1', 'elasticnet'], 'alpha': ['optimal', '0.0001'], 'epsilon': np.logspace(-3,10,10)}]
     grid_search = skgs.GridSearchCV(sklm.SGDClassifier(), param_grid, cv=5)
     grid_search.fit(X,y)
     print 'Best Score of Grid Search: ' + str(grid_search.best_score_)
