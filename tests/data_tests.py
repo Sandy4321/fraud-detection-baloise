@@ -1,4 +1,4 @@
-from data.data_access_local import LocalData as Data
+from data.data_access import LocalData as Data
 #from data.data_access_db import DbData as Data
 
 data_var = Data()

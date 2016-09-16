@@ -1,7 +1,7 @@
 from string import split
 from detection.rules import RuleDetection
 #from detection.learn import LearnDetection as LearnDetection
-from detection.fake_learn import FakeLearn as LearnDetection
+from detection.learn import FakeLearn as LearnDetection
 
 #from data.data_access import DbData as Data
 from data.data_access import LocalData as Data
@@ -40,6 +40,7 @@ def handle_newdamagecase(request, content_len=0, type="GET"):
         #TODO: Return to Person Page
     else:
         #TODO: Return Form to input data
+        #TODO: Create frontend/newdamagecase.html
         pass
     return NotImplemented
 
@@ -52,6 +53,7 @@ def handle_enterpono(request, content_len=0, type="GET"):
         #TODO: Return to correct person page
     else:
         #TODO: Return Form to input PoNo
+        #TODO: Create frontend/enterpono.html
         pass
     return NotImplemented
 
@@ -64,6 +66,7 @@ def handle_personinfo(request, content_len=0, type="GET"):
         # TODO: Gather PersonInfo, Approved Damages, Disapproved Damages, Open Damages
         # PoNo should be in URL
         # Build table with function and inject to html file maybe
+        # TODO: Create frontend/personinfo.html
         pass
 
     return NotImplemented

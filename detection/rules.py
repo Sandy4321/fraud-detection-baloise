@@ -1,7 +1,7 @@
 from datetime import datetime #(sig)
 from datetime import timedelta
 
-from data_access import LocalData as Data
+from data.data_access import LocalData as Data
 
 ################################
 # ASSUMPTIONS ABOUT ATTRIBUTES:#
@@ -20,7 +20,8 @@ class RuleDetection:
     # Checks if the given there was "hagel" during 'time' in 'place'
     # Could be implemented by using the API of Forecast
     # key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    def hagel(time, place):
+    def hagel(self, time, place):
+        #TODO: Fake like FakeLearn
         return True
 
     # This method, given the attributes of a newly issued "Schadensmeldung",
@@ -29,9 +30,10 @@ class RuleDetection:
     # Note that there may be false-positives, so the request should further be
     # investigated by "Versicherungsmenschen"
     def isFraud(self, damage):
-
+        #TODO: Adapt if clauses
         # if Data.shouldCheckForHagelRule(damage):
         # @muy: meinsch so? wi da obe? ^^^^^^
+        # @vince: ja genau
         # Rule for Hagel
         if ((damage.data['VERSARTGRP'] == 'MF Kasko' or
             damage.data['VERSARTGRP'] == 'MF Haftpflicht' or
@@ -48,10 +50,10 @@ class RuleDetection:
            damage.data['SDURS'] == 'Hagel'):
 
             # check if the weather actually was as stated in the request
-            if hagel(damage.data['SDERDAT'], damage.data['SDERORT']):
+            if self.hagel(damage.data['SDERDAT'], damage.data['SDERORT']):
                 return True, 'Es gab gar keinen Hagel zu dieser Zeit an diesem Ort!'
             else:
-                return False, 'Es gab tatsächlich Hagel zu dieser Zeit an diesem Ort'
+                return False, 'Es gab tatsaechlich Hagel zu dieser Zeit an diesem Ort'
 
         # Rule for Iphone
         # if Data.shouldCheckforIphone(damage):
@@ -75,7 +77,7 @@ class RuleDetection:
         # if datamodule.
 
 
-        # Rule for too many "Schadensfälle"
+        # Rule for too many "Schadensfaelle"
         # Note that we assume that VSNR refers to POLO (which may be wrong)
         # if Data.shouldCheckforFreqLimit(damage):
 	if (damage.data['VERSARTGRP'] == 'Wertsachen' and

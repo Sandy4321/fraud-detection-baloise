@@ -38,6 +38,7 @@ class DbData(Data):
 
 class LocalData(Data):
 
+    #TODO: Generate all customers
     customers = {
         1: {
             "name"          : "Ruedi Moor",
@@ -46,6 +47,7 @@ class LocalData(Data):
         }
     }
 
+    #TODO: Generate all damage cases
     damage_cases = {
         1: {
             "police_no"     : 1,

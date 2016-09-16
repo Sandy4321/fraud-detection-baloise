@@ -5,12 +5,13 @@ import sklearn.linear_model as sklm
 import sklearn.neighbors as skn
 
 class FakeLearn:
-
-    probs = {'1':0.87, '2':0.21, '3':0.12, '4': 0.33, '5': 0.02, '6': 0.15, '7': 0.$
+    #TODO: Fix dict
+    #probs = {'1':0.87, '2':0.21, '3':0.12, '4': 0.33, '5': 0.02, '6': 0.15, '7': 0.$
 
 
     def isFraud(self, damage):
-        return probs[damage]
+        #return probs[damage]
+        return NotImplemented
 
 
 class LearnDetection:
