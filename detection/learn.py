@@ -16,6 +16,9 @@ class Learn:
     def predict(self, new_sample):
         return NotImplemented
 
+# The following functions each implement a gird search over the hyper-parameter
+# space of various supervised classification algorithms
+# Use them to find the best model for the problem.
 def radNearestNeighborsGridSeach(X,y):
     param_grid = [{'radius': np.linspace(0.1,2,20), 'weights': ['uniform', 'distance'], 'algorithm':['auto', 'kd_tree'], 'outlier_label':[-1]}]
     grid_search = skgs.GridSearchCV(skn.RadiusNeighborsClassifier(), param_grid, cv=5)
@@ -67,5 +70,5 @@ def svcRBFGridsearch(X, y, Test):
     print 'Best Params of Grid Search: ' + str(grid_search.best_params_)
 
 if __name__ == '__main__':
-    print np.linspace(1,5,5)
+    print 'Not yet implemented'
         
