@@ -1,5 +1,5 @@
 #import data
-class Rules:
+class RuleDetection:
     def isFraud(damage):
         # Hagel Regel
         if damage.data['VERSARTGRP'] == 'MF Kasko' &&
