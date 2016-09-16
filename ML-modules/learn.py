@@ -15,6 +15,13 @@ class Learn:
     def predict(self, new_sample):
         return NotImplemented
 
+def SGDClassifierGridSearch(X, y):
+    paramgrid = [{'loss': ['hinge', 'modified_huber', 'squared_hinge', 'perceptron', 'log', 'squared_loss', 'huber', 'epsilon_insensitive', 'squared_epsilon_insensitive'], 'penalty': ['l2', 'l1', 'elasticnet'], 'alpha': ['optimal', '0.0001'], 'epsilon': np.logspace(-3,10,10)}]
+    grid_search = skgs.GridSearchCV(sklm.SGDClassifier(), param_grid, cv=5)
+    grid_search.fit(X,y)
+    print 'Best Score of Grid Search: ' + str(grid_search.best_score_)
+    print 'Best Params of Grid Search: ' + str(grid_search.best_params_)
+
 def logisticRegressionGridSearch(X, y):
     param_grid = [{'penalty':['l1', 'l2'], 'dual': [False], 'C': np.logspace(-3.20,10), 'solver':['sag']}]
     grid_search = skgs.GridSearchCV(sklm.LogisticRegression(), param_grid, cv=5)
