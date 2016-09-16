@@ -1,6 +1,10 @@
-- Feature erklärungen
-- Website frontend form
-- Machine learning modules
-- data interface
-- Webserver
-
+- Kunden generieren
+- Wetter generieren
+- Schadenfaelle generieren
+- Rules implementieren
+- JS Ajax Requests implementieren
+- Frontend (Enter PoNo, Info about client, add damage case, info about client + result damage case)
+	- Damage Cases: Approved, Disapproved, Open)
+	- Open cases have 2 parameters: Output of ML and Output of Rules
+- Request handling
+- 
