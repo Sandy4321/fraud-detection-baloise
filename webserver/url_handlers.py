@@ -8,6 +8,7 @@ from data.data_access import LocalData as Data
 
 #Handle "/"
 def handle_root(request, content_len=0, type="GET"):
+    #TODO: We could remove that
     index_file = open("../frontend/index.html")
     request.send_response(200)
     request.send_header('Content-Type', 'text/html')
@@ -38,22 +39,26 @@ def handle_newdamagecase(request, content_len=0, type="GET"):
         Data.damage_cases[damage_no] = parsed_data
 
         #TODO: Return to Person Page
+        #Again easiest is just to redirect to localhost/personinfo/pono
     else:
         #TODO: Return Form to input data
-        #TODO: Create frontend/newdamagecase.html
+        #This is basically the big form to enter the data
         pass
     return NotImplemented
 
 
 # Handle "/enterpono"
 def handle_enterpono(request, content_len=0, type="GET"):
+    #TODO: Check if URL makes sense, else call handle_404()
     if type == "POST":
         form_data = request.rfile.read(content_len)
         parsed_data = read_form_data(form_data)
         #TODO: Return to correct person page
+        #Just read pono from parsed_data and then call handle_personinfo
+        #Even simpler would be just redirect to personinfo/pono
     else:
-        #TODO: Return Form to input PoNo
-        #TODO: Create frontend/enterpono.html
+        #TODO: Return Form to input PoNo (easy)
+        #Form with one input field, action on /enterpono
         pass
     return NotImplemented
 
@@ -66,7 +71,9 @@ def handle_personinfo(request, content_len=0, type="GET"):
         # TODO: Gather PersonInfo, Approved Damages, Disapproved Damages, Open Damages
         # PoNo should be in URL
         # Build table with function and inject to html file maybe
-        # TODO: Create frontend/personinfo.html
+        # To make it easy create two files: top.html and bottom.html
+        # Create table using some function as string
+        # Return top.html + tables + bottom.html
         pass
 
     return NotImplemented
@@ -76,6 +83,7 @@ def handle_personinfo(request, content_len=0, type="GET"):
 def handle_404(request):
     request.send_error(404, 'File Not Found: %s' % request.path)
 
+#Function to parse POST data to key value pair of form-field-name and form-field-value
 def read_form_data(data):
     features = split(data, "&")
     dict = {}

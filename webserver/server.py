@@ -30,7 +30,8 @@ class RequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             handle_newdamagecase(self)
         elif self.path == "/enterpono":
             handle_enterpono(self)
-        elif self.path == "/personinfo":
+        #Here we see if it is contains since usually it is /personinfo/pono
+        elif "/personinfo" in self.path:
             handle_personinfo(self)
         else:
             handle_404(self)
