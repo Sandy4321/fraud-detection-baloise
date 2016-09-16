@@ -70,7 +70,7 @@ class RuleDetection:
 
         # Rule for too many "Schadensfälle"
         # Note that we assume that VSNR refers to POLO (which may be wrong)
-	if (damage.data['VERSARTGRP'] == 'Wertsachen' and        
+	if (damage.data['VERSARTGRP'] == 'Wertsachen' and
 	    datamodule.numberOfDamagesWithinLastTwoYears(
 		damage.data['VSNR'],
 		damage.data['SDERDAT']) > 5):
@@ -92,4 +92,23 @@ class RuleDetection:
 
 
 
+=======
+        # Iphone
+        if damage.data['VERSARTGRP'] == 'Wertsachen' and \
+           damage.data['VERSART'] == 'einfacher Diebstahl' and \
+           damage.data['SDART'] == 'Kombiversicherung Privathaushalt' and \
+           damage.data['SDURS'] == 'einfacher Diebstahl':
+
+            date_obj = datetime.striptime(damage.data['SDERDAT'],'%Y-%m-%d')
+            iphonerelease = datetime.striptime('2016-09-16', '%Y-%m-%d')
+            delta = date_obj - iphonerelease
+            if delta <= 10:
+                return True
+            else:
+                return False
+
+        # Deckungseinschluss
+        if damage.data[''] ==
+        if damage.data[''] ==
+>>>>>>> 285ded4bc80ff1cccf73dc4e161beba4fefa7c48
 
