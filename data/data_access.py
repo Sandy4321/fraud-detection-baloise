@@ -48,7 +48,10 @@ class LocalData(Data):
 
     damage_cases = {
         1: {
-            "police_no"     : 1
+            "police_no"     : 1,
+            "damage_group"  : "Wertsachen",
+            "damage_type"   : "einfacher Diebstahl",
+            "damage_date"   : "2017-09"
         }
     }
 

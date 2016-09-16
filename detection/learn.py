@@ -4,9 +4,6 @@ import sklearn.grid_search as skgs
 import sklearn.linear_model as sklm
 import sklearn.neighbors as skn
 
-from data_access import LocalData as Data
-
-
 class FakeLearn:
 
     def isFraud(self, damage):

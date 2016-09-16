@@ -29,7 +29,11 @@ def handle_newdamagecase(request, content_len=0, type="GET"):
         (parsed_data["rule_fraud"], parsed_data["rule_reason"]) = rule_detector.isFraud(damage_no)
 
         ml_detector = LearnDetection()
-        (parsed_data["ml_fraud"], parsed_data["ml_prob"]) = ml_detector.isFraud(damage_no)
+        parsed_data["ml_prob"] = ml_detector.isFraud(damage_no)
+        if parsed_data["ml_prob"] > 0.50:
+            parsed_data["ml_fraud"] = True
+        else:
+            parsed_data["ml_fraud"] = False
 
         Data.damage_cases[damage_no] = parsed_data
 
@@ -45,10 +49,23 @@ def handle_enterpono(request, content_len=0, type="GET"):
     if type == "POST":
         form_data = request.rfile.read(content_len)
         parsed_data = read_form_data(form_data)
-
+        #TODO: Return to correct person page
+    else:
+        #TODO: Return Form to input PoNo
+        pass
+    return NotImplemented
 
 # Handle "/personinfo"
 def handle_personinfo(request, content_len=0, type="GET"):
+    if type == "POST":
+        #TODO: At the moment nothing
+        pass
+    else:
+        # TODO: Gather PersonInfo, Approved Damages, Disapproved Damages, Open Damages
+        # PoNo should be in URL
+        # Build table with function and inject to html file maybe
+        pass
+
     return NotImplemented
 
 
