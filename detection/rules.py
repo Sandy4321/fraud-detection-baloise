@@ -1,6 +1,7 @@
-# TODO: import datamodule
 from datetime import datetime #(sig)
 from datetime import timedelta
+
+from data_access import LocalData as Data
 
 ################################
 # ASSUMPTIONS ABOUT ATTRIBUTES:#
@@ -13,7 +14,7 @@ from datetime import timedelta
 # SDERORT: Schadensort         #
 ################################
 
-# return tuple (int, String)
+# return tuple (bool, String)
 class RuleDetection:
 
     # Checks if the given there was "hagel" during 'time' in 'place'
@@ -45,7 +46,8 @@ class RuleDetection:
            damage.data['SDURS'] == 'Hagel'):
 
             # check if the weather actually was as stated in the request
-            return hagel(damage.data['SDERDAT'], damage.data['SDERORT'])
+            if hagel(damage.data['SDERDAT'], damage.data['SDERORT']):
+                return True, ''
 
         # Rule for Iphone
         if (damage.data['VERSARTGRP'] == 'Wertsachen' and
@@ -71,7 +73,7 @@ class RuleDetection:
         # Rule for too many "Schadensfälle"
         # Note that we assume that VSNR refers to POLO (which may be wrong)
 	if (damage.data['VERSARTGRP'] == 'Wertsachen' and
-	    datamodule.numberOfDamagesWithinLastTwoYears(
+	    Data.numberOfDamagesWithinLastTwoYears(
 		damage.data['VSNR'],
 		damage.data['SDERDAT']) > 5):
             return True
