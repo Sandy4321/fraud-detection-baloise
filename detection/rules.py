@@ -30,6 +30,7 @@ class RuleDetection:
     # investigated by "Versicherungsmenschen"
     def isFraud(self, damage):
 
+Data.khvkkhgkkgk(damage)
         # Rule for Hagel
         if ((damage.data['VERSARTGRP'] == 'MF Kasko' or
             damage.data['VERSARTGRP'] == 'MF Haftpflicht' or
@@ -47,7 +48,9 @@ class RuleDetection:
 
             # check if the weather actually was as stated in the request
             if hagel(damage.data['SDERDAT'], damage.data['SDERORT']):
-                return True, ''
+                return True, 'Es gab gar keinen Hagel zu dieser Zeit an diesem Ort!'
+            else:
+                return False, 'Es gab tatsächlich Hagel zu dieser Zeit an diesem Ort'
 
         # Rule for Iphone
         if (damage.data['VERSARTGRP'] == 'Wertsachen' and
