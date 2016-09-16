@@ -1,10 +1,17 @@
 import numpy as np
-# import sklearn.cross_validation as skcv
 import sklearn.svm as sksvm
 import sklearn.grid_search as skgs
 import sklearn.linear_model as sklm
 import sklearn.neighbors as skn
-# import data
+
+from data_access import LocalData as Data
+
+
+class FakeLearn:
+
+    def isFraud(self, damage):
+        return {'1':0.87, '2':0.21, '3':0.12, '4': 0.33, '5': 0.02, '6': 0.15, '7': 0.45, '8':0.94, '9':0.22, '10':0.04, '11': 0.36, '12': 0.11, '13': 0.44, '14':0.54, '15':0.01, '16':0.99, '17':0.27, '18':0.76, '19':0.86, '20':0.42, '21':0.12, '22':0.33, '23':0.12, '24':0.03}
+
 
 class LearnDetection:
 
@@ -13,7 +20,7 @@ class LearnDetection:
     def init(self):
         return NotImplemented
 
-    def predict(self, new_sample):
+    def isFraud(self, damage):
         return NotImplemented
 
 # The following functions each implement a gird search over the hyper-parameter
