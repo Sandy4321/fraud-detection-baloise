@@ -1,7 +1,7 @@
 from datetime import datetime #(sig)
 from datetime import timedelta
 
-from data_access import LocalData as Data
+from data.data_access import LocalData as Data
 
 mydata = Data()
 
