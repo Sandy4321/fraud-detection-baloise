@@ -95,7 +95,8 @@ class LocalData(Data):
             "ml_fraud"      : True,
             "ml_prob"       : 0.87,
             "rule_fraud"    : True,
-            "rule_reason"   : "Schadensmeldung nahe am iPhone 7 Release"
+            "rule_reason"   : "Schadensmeldung nahe am iPhone 7 Release",
+            "damage_no"     : 1
         },
         2: {
             "police_no"     : 2,
@@ -107,7 +108,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.21,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 2
         },
         3: {
             "police_no"     : 3,
@@ -119,7 +121,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.12,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 3
         },
         4: {
             "police_no"     : 4,
@@ -131,7 +134,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.33,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 4
         },
         5: {
             "police_no"     : 5,
@@ -143,7 +147,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.02,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 5
         },
         6: {
             "police_no"     : 6,
@@ -155,7 +160,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.15,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 6
         },
         7: {
             "police_no"     : 1,
@@ -167,7 +173,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.45,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 7
         },
         8: {
             "police_no"     : 2,
@@ -179,7 +186,8 @@ class LocalData(Data):
             "ml_fraud"      : True,
             "ml_prob"       : 0.94,
             "rule_fraud"    : True,
-            "rule_reason"   : "Es gab keinen Hagel zu dieser Zeit an diesem Ort"
+            "rule_reason"   : "Es gab keinen Hagel zu dieser Zeit an diesem Ort",
+            "damage_no"     : 8
         },
         9: {
             "police_no"     : 3,
@@ -191,7 +199,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.22,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 9
         },
         10: {
             "police_no"     : 4,
@@ -203,7 +212,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.04,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 10
         },
         11: {
             "police_no"     : 5,
@@ -215,7 +225,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.36,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 11
         },
         12: {
             "police_no"     : 6,
@@ -227,7 +238,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.11,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 12
         },
         13: {
             "police_no"     : 1,
@@ -239,7 +251,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.44,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 13
         },
         14: {
             "police_no"     : 1,
@@ -251,7 +264,8 @@ class LocalData(Data):
             "ml_fraud"      : True,
             "ml_prob"       : 0.54,
             "rule_fraud"    : True,
-            "rule_reason"   : "Deckungseinschluss nach Schaden"
+            "rule_reason"   : "Deckungseinschluss nach Schaden",
+            "damage_no"     : 14
         },
         15: {
             "police_no"     : 2,
@@ -263,7 +277,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.01,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 15
         },
         16: {
             "police_no"     : 2,
@@ -275,7 +290,8 @@ class LocalData(Data):
             "ml_fraud"      : True,
             "ml_prob"       : 0.99,
             "rule_fraud"    : True,
-            "rule_reason"   : "Deckungseinschluss nach Schaden"
+            "rule_reason"   : "Deckungseinschluss nach Schaden",
+            "damage_no"     : 16
         },
         17: {
             "police_no"     : 3,
@@ -287,7 +303,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.27,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 17
         },
         18: {
             "police_no"     : 3,
@@ -299,7 +316,8 @@ class LocalData(Data):
             "ml_fraud"      : True,
             "ml_prob"       : 0.76,
             "rule_fraud"    : False,
-            "rule_reason"   : "Deckungseinschluss nach Schaden"
+            "rule_reason"   : "Deckungseinschluss nach Schaden",
+            "damage_no"     : 18
         },
         19: {
             "police_no"     : 3,
@@ -311,7 +329,8 @@ class LocalData(Data):
             "ml_fraud"      : True,
             "ml_prob"       : 0.86,
             "rule_fraud"    : True,
-            "rule_reason"   : "Zu viele Schaeden in der letzten Zeit"
+            "rule_reason"   : "Zu viele Schaeden in der letzten Zeit",
+            "damage_no"     : 19
         },
         20: {
             "police_no"     : 3,
@@ -323,7 +342,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.42,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 20
         },
         21: {
             "police_no"     : 3,
@@ -335,7 +355,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.12,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 21
         },
         22: {
             "police_no"     : 3,
@@ -347,7 +368,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.33,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 22
         },
         23: {
             "police_no"     : 3,
@@ -359,7 +381,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.12,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 23
         },
         24: {
             "police_no"     : 3,
@@ -371,7 +394,8 @@ class LocalData(Data):
             "ml_fraud"      : False,
             "ml_prob"       : 0.03,
             "rule_fraud"    : False,
-            "rule_reason"   : ""
+            "rule_reason"   : "",
+            "damage_no"     : 24
         }
     }
 
