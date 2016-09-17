@@ -17,12 +17,14 @@ from data.data_access import LocalData as Data
 # return tuple (bool, String)
 class RuleDetection:
 
+    hagelmap = {'1':False, '2':False, '3':False, '4':False, '5':False, '6':False, '7':True, '8':False, '9':True, '10':True, '11':True, '12':True, '13': False, '14':False, '15':False, '16':False, '17':False, '18':False, '19':False, '20':False, '21':False, '22':False, '23':False, '24':False}
+
     # Checks if the given there was "hagel" during 'time' in 'place'
     # Could be implemented by using the API of Forecast
     # key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    def hagel(self, time, place):
-        #TODO: Fake like FakeLearn
-        return True
+    def hagel(self, damage):
+        # Would access fields with Data.getTime(damage) and Data.getLocation(damage)
+        return hagelmap[damage]
 
     # This method, given the attributes of a newly issued "Schadensmeldung",
     # will use a prototype set of "hand-crafted" decision rules to classify
@@ -30,40 +32,19 @@ class RuleDetection:
     # Note that there may be false-positives, so the request should further be
     # investigated by "Versicherungsmenschen"
     def isFraud(self, damage):
-        #TODO: Adapt if clauses
-        # if Data.shouldCheckForHagelRule(damage):
-        # @muy: meinsch so? wi da obe? ^^^^^^
-        # @vince: ja genau
-        # Rule for Hagel
-        if ((damage.data['VERSARTGRP'] == 'MF Kasko' or
-            damage.data['VERSARTGRP'] == 'MF Haftpflicht' or
-            damage.data['VERSARTGRP'] == 'MF Rechtsschutz' or
-            damage.data['VERSARTGRP'] == 'Allgemeine Haftpflicht' or
-            damage.data['VERSARTGRP'] == 'Sach Elementar' or
-            damage.data['VERSARTGRP'] == 'Sach Feuer' or
-            damage.data['VERSARTGRP'] == 'Sach Betriebsunterrechnung' or
-            damage.data['VERSARTGRP'] == 'Sach Diebstahl / Wertsachen' or
-            damage.data['VERSARTGRP'] == 'Sach Wasser' or
-            damage.data['VERSARTGRP'] == 'Sach Glas') and
-           damage.data['VERSART'] == 'Teilkasko' and
-           damage.data['SDART'] == 'Elementar' and
-           damage.data['SDURS'] == 'Hagel'):
 
+        # Rule for Hagel
+        if Data.shouldCheckForHagelRule(damage):
             # check if the weather actually was as stated in the request
-            if self.hagel(damage.data['SDERDAT'], damage.data['SDERORT']):
+            if (not self.hagel(damage)):
                 return True, 'Es gab gar keinen Hagel zu dieser Zeit an diesem Ort!'
             else:
-                return False, 'Es gab tatsaechlich Hagel zu dieser Zeit an diesem Ort'
+                return False, 'muy'
 
         # Rule for Iphone
-        # if Data.shouldCheckforIphone(damage):
-        if (damage.data['VERSARTGRP'] == 'Wertsachen' and
-           damage.data['VERSART'] == 'einfacher Diebstahl' and
-           damage.data['SDART'] == 'Kombiversicherung Privathaushalt' and
-           damage.data['SDURS'] == 'einfacher Diebstahl'):
-
+        if Data.shouldCheckforIphone(damage):
              # Check if the issue date is within 10 days of
-             # the release date of the Iphone 6
+             # the release date of the Iphone 7
              date_obj = datetime.strptime(damage.data['SDERDAT'],'%Y-%m-%d')
              iphonerelease = datetime.strptime('2016-09-16', '%Y-%m-%d')
              delta = date_obj - iphonerelease
@@ -78,12 +59,8 @@ class RuleDetection:
 
 
         # Rule for too many "Schadensfaelle"
-        # Note that we assume that VSNR refers to POLO (which may be wrong)
-        # if Data.shouldCheckforFreqLimit(damage):
-	if (damage.data['VERSARTGRP'] == 'Wertsachen' and
-	    Data.numberOfDamagesWithinLastTwoYears(
-		damage.data['VSNR'],
-		damage.data['SDERDAT']) > 5):
-            return True
+	if (Data.shouldCheckForTooManyDamages(damage) and
+	    Data.numberOfDamagesWithinLastTwoYears(damage) > 5):
+            return True, 'Zu viele Schäden in der letzten Zeit'
         else:
-            return False
+            return False, 'muy'

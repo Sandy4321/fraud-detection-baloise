@@ -57,6 +57,12 @@ class LocalData(Data):
         }
     }
 
+    def shouldCheckForHagelRule(self, damage):
+        if damage == '7' or damage == '8' or damage == '9' or damage == '10' or damage == '11' or damage == '12':
+            return True
+        else:
+            return False
+
     def getBatch(self):
         return NotImplemented
 
