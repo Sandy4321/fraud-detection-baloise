@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>New damage case</title>
+    <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
 <!-- TODO: Form to input data about damage case, action on /newdamagecase -->
+<form action="http://localhost:5000/newdamagecase" method="post">
+    <p>Policennummer</p><br>
+    <input type="text" name="police"><br>
+    <p>Versicherungsartgrupper</p><br>
+    <input type="text" name="damage_group"><br>
+    <p>Versicherungsart</p><br>
+    <input type="text" name="damage_type"><br>
+    <p>Schadendatum</p><br>
+    <input type="text" name="damage_date"><br>
+    <p>Schadennummer</p><br>
+    <input type="text" name="damage_no"><br>
+    <p>Schadenart</p><br>
+    <input type="text" name="damage_kind">
+    <p>Schadenursache</p><br>
+    <input type="text" name="damage_reason">
+    <br>
+    <input type="submit" name="Submit">
+</form>
 </body>
 </html>

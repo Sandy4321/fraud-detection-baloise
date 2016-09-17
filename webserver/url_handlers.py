@@ -2,6 +2,7 @@ from string import split
 from detection.rules import RuleDetection
 #from detection.learn import LearnDetection as LearnDetection
 from detection.learn import FakeLearn as LearnDetection
+from frontend.personinfo_builder import PersonInfoBuilder
 
 #from data.data_access import DbData as Data
 from data.data_access import LocalData as Data
@@ -40,10 +41,16 @@ def handle_newdamagecase(request, content_len=0, type="GET"):
 
         #TODO: Return to Person Page
         #Again easiest is just to redirect to localhost/personinfo/pono
+        request.send_response(301)
+        request.send_header('Location', 'http://localhost:5000/personinfo/' + str(parsed_data["police"]))
+        request.end_headers()
     else:
         #TODO: Return Form to input data
-        #This is basically the big form to enter the data
-        pass
+        html_file = open("../frontend/newdamagecase.html")
+        request.send_response(200)
+        request.send_header('Content-Type', 'text/html')
+        request.end_headers()
+        request.wfile.write(html_file.read())
     return NotImplemented
 
 
@@ -53,13 +60,20 @@ def handle_enterpono(request, content_len=0, type="GET"):
     if type == "POST":
         form_data = request.rfile.read(content_len)
         parsed_data = read_form_data(form_data)
+
         #TODO: Return to correct person page
         #Just read pono from parsed_data and then call handle_personinfo
         #Even simpler would be just redirect to personinfo/pono
+        request.send_response(301)
+        request.send_header('Location', 'http://localhost:5000/personinfo/' + str(parsed_data["police"]))
+        request.end_headers()
     else:
         #TODO: Return Form to input PoNo (easy)
-        #Form with one input field, action on /enterpono
-        pass
+        html_file = open("../frontend/enterpono.html")
+        request.send_response(200)
+        request.send_header('Content-Type', 'text/html')
+        request.end_headers()
+        request.wfile.write(html_file.read())
     return NotImplemented
 
 # Handle "/personinfo"
@@ -74,6 +88,14 @@ def handle_personinfo(request, content_len=0, type="GET"):
         # To make it easy create two files: top.html and bottom.html
         # Create table using some function as string
         # Return top.html + tables + bottom.html
+        person_info = PersonInfoBuilder()
+        police = request.path.rsplit('/', 1)[-1]
+        person_info.buildPersonInfo(police)
+        request.send_response(200)
+        request.send_header('Content-Type', 'text/html')
+        request.end_headers()
+        request.wfile.write(person_info.toString())
+
         pass
 
     return NotImplemented
