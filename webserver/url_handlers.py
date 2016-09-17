@@ -54,13 +54,11 @@ def handle_newdamagecase(request, content_len=0, type="GET"):
 # Handle "/enterpono"
 def handle_enterpono(request, content_len=0, type="GET"):
     if type == "POST":
-        police = request.path.rsplit('/', 1)[-1]
-        if police not in Data.customers:
-            handle_404(request)
-            return
         form_data = request.rfile.read(content_len)
         parsed_data = read_form_data(form_data)
-
+        if int(parsed_data["police"]) not in Data.customers:
+            handle_404(request)
+            return
         #Just read pono from parsed_data and then call handle_personinfo
         #Even simpler would be just redirect to personinfo/pono
         request.send_response(301)

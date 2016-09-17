@@ -315,7 +315,7 @@ class LocalData(Data):
             "damage_date"   : "2016-05-05",
             "ml_fraud"      : True,
             "ml_prob"       : 0.76,
-            "rule_fraud"    : False,
+            "rule_fraud"    : True,
             "rule_reason"   : "Deckungseinschluss nach Schaden",
             "damage_no"     : 18
         },
@@ -384,19 +384,19 @@ class LocalData(Data):
             "rule_reason"   : "",
             "damage_no"     : 23
         },
-        24: {
-            "police_no"     : 3,
-            "damage_group"  : "Wertsachen",
-            "damage_type"   : "einfacher Diebstahl",
-            "damage_kind"   : "Kombiversicherung Privathaushalt",
-            "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-10-05",
-            "ml_fraud"      : False,
-            "ml_prob"       : 0.03,
-            "rule_fraud"    : False,
-            "rule_reason"   : "",
-            "damage_no"     : 24
-        }
+        # 24: {
+        #     "police_no"     : 3,
+        #     "damage_group"  : "Wertsachen",
+        #     "damage_type"   : "einfacher Diebstahl",
+        #     "damage_kind"   : "Kombiversicherung Privathaushalt",
+        #     "damage_reason" : "einfacher Diebstahl",
+        #     "damage_date"   : "2016-10-05",
+        #     "ml_fraud"      : False,
+        #     "ml_prob"       : 0.03,
+        #     "rule_fraud"    : False,
+        #     "rule_reason"   : "",
+        #     "damage_no"     : 24
+        # }
     }
 
     def shouldCheckForHagelRule(self, damage):
