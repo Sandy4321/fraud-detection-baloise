@@ -85,7 +85,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-09-10"
+            "damage_date"   : "2016-09-10",
+            "ml_fraud"      : True,
+            "ml_prob"       : 0.87,
+            "rule_fraud"    : True,
+            "rule_reason"   : "Schadensmeldung nahe am iPhone 7 Release"
         },
         2: {
             "police_no"     : 2,

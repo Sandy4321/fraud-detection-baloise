@@ -53,10 +53,11 @@ def handle_newdamagecase(request, content_len=0, type="GET"):
 
 # Handle "/enterpono"
 def handle_enterpono(request, content_len=0, type="GET"):
-    police = request.path.rsplit('/', 1)[-1]
-    if police not in Data.customers:
-        handle_404(request)
     if type == "POST":
+        police = request.path.rsplit('/', 1)[-1]
+        if police not in Data.customers:
+            handle_404(request)
+            return
         form_data = request.rfile.read(content_len)
         parsed_data = read_form_data(form_data)
 
@@ -71,7 +72,6 @@ def handle_enterpono(request, content_len=0, type="GET"):
         request.send_header('Content-Type', 'text/html')
         request.end_headers()
         request.wfile.write(html_file.read())
-    return NotImplemented
 
 # Handle "/personinfo"
 def handle_personinfo(request, content_len=0, type="GET"):
@@ -90,11 +90,6 @@ def handle_personinfo(request, content_len=0, type="GET"):
         request.send_header('Content-Type', 'text/html')
         request.end_headers()
         request.wfile.write(person_info.toString())
-
-        pass
-
-    return NotImplemented
-
 
 # Handle all other cases
 def handle_404(request):
