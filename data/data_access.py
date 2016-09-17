@@ -41,9 +41,40 @@ class LocalData(Data):
     #TODO: Generate all customers
     customers = {
         1: {
-            "name"          : "Ruedi Moor",
-            "damage_cases"  : [1]
-
+            "name"          : "Rudolf Moor",
+            "birthday"      : "1993-02-17",
+            "address"       : "Stigliweg 14, Lyss",
+            "damage_cases"  : [1, 7, 13, 14]
+        },
+        2: {
+            "name"          : "Stefan Ruchti",
+            "birthday"      : "1987-04-17",
+            "address"       : "Blumenweg 2, Basel",
+            "damage_cases"  : [2, 8, 15, 16]
+        },
+        3: {
+            "name"          : "Jonas Jatsch",
+            "birthday"      : "1970-04-23",
+            "address"       : "Hauptstrasse 2, Bern",
+            "damage_cases"  : [3, 9, 17, 18, 19, 20, 21, 22, 23, 24]
+        },
+        4: {
+            "name"          : "Barbara Blau",
+            "birthday"      : "1992-08-25",
+            "address"       : "Nidaugasse 3, Biel",
+            "damage_cases"  : [4, 10]
+        },
+        5: {
+            "name"          : "Hans Herrmann",
+            "birthday"      : "1962-01-01",
+            "address"       : "Bernstrasse 4, Aarberg",
+            "damage_cases"  : [5, 11]
+        },
+        6: {
+            "name"          : "Brigitte Meier",
+            "birthday"      : "1974-01-17",
+            "address"       : "Sonnmatte 4, Olten",
+            "damage_cases"  : [6, 12]
         }
     }
 
@@ -52,144 +83,192 @@ class LocalData(Data):
             "police_no"     : 1,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2016-09-10"
         },
         2: {
             "police_no"     : 2,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2016-10-05"
         },
         3: {
             "police_no"     : 3,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2014-06-05"
         },
         4: {
             "police_no"     : 4,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2014-09-04"
         },
         5: {
             "police_no"     : 5,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2016-06-03"
         },
         6: {
             "police_no"     : 6,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2015-02-01"
         },
         7: {
             "police_no"     : 1,
             "damage_group"  : "MF Kasko",
-            "damage_type"   : "Hagel",
+            "damage_type"   : "Teilkasko",
+            "damage_kind"   : "Elementar",
+            "damage_reason" : "Hagel",
             "damage_date"   : "2016-08-28"
         },
         8: {
             "police_no"     : 2,
             "damage_group"  : "MF Kasko",
-            "damage_type"   : "Hagel",
+            "damage_type"   : "Teilkasko",
+            "damage_kind"   : "Elementar",
+            "damage_reason" : "Hagel",
             "damage_date"   : "2016-08-28"
         },
         9: {
             "police_no"     : 3,
             "damage_group"  : "MF Kasko",
-            "damage_type"   : "Hagel",
+            "damage_type"   : "Teilkasko",
+            "damage_kind"   : "Elementar",
+            "damage_reason" : "Hagel",
             "damage_date"   : "2016-08-28"
         },
         10: {
             "police_no"     : 4,
             "damage_group"  : "MF Kasko",
-            "damage_type"   : "Hagel",
+            "damage_type"   : "Teilkasko",
+            "damage_kind"   : "Elementar",
+            "damage_reason" : "Hagel",
             "damage_date"   : "2016-08-28"
         },
         11: {
             "police_no"     : 5,
             "damage_group"  : "MF Kasko",
-            "damage_type"   : "Hagel",
+            "damage_type"   : "Teilkasko",
+            "damage_kind"   : "Elementar",
+            "damage_reason" : "Hagel",
             "damage_date"   : "2016-08-28"
         },
         12: {
             "police_no"     : 6,
             "damage_group"  : "MF Kasko",
-            "damage_type"   : "Hagel",
+            "damage_type"   : "Teilkasko",
+            "damage_kind"   : "Elementar",
+            "damage_reason" : "Hagel",
             "damage_date"   : "2016-08-28"
         },
         13: {
             "police_no"     : 1,
             "damage_group"  : "MF Haftpflicht",
-            "damage_type"   : "-",
+            "damage_type"   : "MF Haftpflicht",
+            "damage_kind"   : "",
+            "damage_reason" : "",
             "damage_date"   : "2016-05-05"
         },
         14: {
             "police_no"     : 1,
             "damage_group"  : "MF Kasko",
-            "damage_type"   : "-",
+            "damage_type"   : "Teilkasko",
+            "damage_kind"   : "",
+            "damage_reason" : "",
             "damage_date"   : "2016-05-05"
         },
         15: {
             "police_no"     : 2,
             "damage_group"  : "MF Haftpflicht",
-            "damage_type"   : "-",
+            "damage_type"   : "MF Haftpflicht",
+            "damage_kind"   : "",
+            "damage_reason" : "",
             "damage_date"   : "2016-05-05"
         },
         16: {
             "police_no"     : 2,
             "damage_group"  : "MF Kasko",
-            "damage_type"   : "-",
+            "damage_type"   : "Teilkasko",
+            "damage_kind"   : "",
+            "damage_reason" : "",
             "damage_date"   : "2016-05-05"
         },
         17: {
             "police_no"     : 3,
             "damage_group"  : "MF Haftpflicht",
-            "damage_type"   : "-",
+            "damage_type"   : "MF Haftpflicht",
+            "damage_kind"   : "",
+            "damage_reason" : "",
             "damage_date"   : "2016-05-05"
         },
         18: {
             "police_no"     : 3,
             "damage_group"  : "MF Kasko",
-            "damage_type"   : "-",
+            "damage_type"   : "Teilkasko",
+            "damage_kind"   : "",
+            "damage_reason" : "",
             "damage_date"   : "2016-05-05"
         },
         19: {
             "police_no"     : 3,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2016-10-09"
         },
         20: {
             "police_no"     : 3,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2016-10-05"
         },
         21: {
             "police_no"     : 3,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2015-01-03"
         },
         22: {
             "police_no"     : 3,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2016-01-09"
         },
         23: {
             "police_no"     : 3,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2016-02-09"
         },
         24: {
             "police_no"     : 3,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
             "damage_date"   : "2016-10-05"
         }
     }
