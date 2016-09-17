@@ -63,6 +63,24 @@ class LocalData(Data):
         else:
             return False
 
+    def shouldCheckforIphone(self, damage):
+        if damage == '1' or damage == '2' or damage == '3' or damage == '4' or damage == '5' or damage == '6':
+            return True
+        else:
+            return False
+
+    def shouldCheckForTooManyDamages(self, damage):
+        if damage == '19' or damage == '20' or damage == '21' or damage == '22' or damage == '23' or damage == '24':
+            return True
+        else:
+            return False
+
+    def getDate(self, damage):
+        # TODO (only needed for cases 19-24)
+
+    def numberOfDamagesWithinLastTwoYears(self, damage):
+        return (damage == '19')
+
     def getBatch(self):
         return NotImplemented
 
