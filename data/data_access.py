@@ -97,7 +97,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-10-05"
+            "damage_date"   : "2016-10-05",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.21,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         3: {
             "police_no"     : 3,
@@ -105,7 +109,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2014-06-05"
+            "damage_date"   : "2014-06-05",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.12,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         4: {
             "police_no"     : 4,
@@ -113,7 +121,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2014-09-04"
+            "damage_date"   : "2014-09-04",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.33,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         5: {
             "police_no"     : 5,
@@ -121,7 +133,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-06-03"
+            "damage_date"   : "2016-06-03",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.02,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         6: {
             "police_no"     : 6,
@@ -129,7 +145,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2015-02-01"
+            "damage_date"   : "2015-02-01",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.15,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         7: {
             "police_no"     : 1,
@@ -137,7 +157,11 @@ class LocalData(Data):
             "damage_type"   : "Teilkasko",
             "damage_kind"   : "Elementar",
             "damage_reason" : "Hagel",
-            "damage_date"   : "2016-08-28"
+            "damage_date"   : "2016-08-28",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.45,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         8: {
             "police_no"     : 2,
@@ -145,7 +169,11 @@ class LocalData(Data):
             "damage_type"   : "Teilkasko",
             "damage_kind"   : "Elementar",
             "damage_reason" : "Hagel",
-            "damage_date"   : "2016-08-28"
+            "damage_date"   : "2016-08-28",
+            "ml_fraud"      : True,
+            "ml_prob"       : 0.94,
+            "rule_fraud"    : True,
+            "rule_reason"   : "Es gab keinen Hagel zu dieser Zeit an diesem Ort"
         },
         9: {
             "police_no"     : 3,
@@ -153,7 +181,11 @@ class LocalData(Data):
             "damage_type"   : "Teilkasko",
             "damage_kind"   : "Elementar",
             "damage_reason" : "Hagel",
-            "damage_date"   : "2016-08-28"
+            "damage_date"   : "2016-08-28",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.22,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         10: {
             "police_no"     : 4,
@@ -161,7 +193,11 @@ class LocalData(Data):
             "damage_type"   : "Teilkasko",
             "damage_kind"   : "Elementar",
             "damage_reason" : "Hagel",
-            "damage_date"   : "2016-08-28"
+            "damage_date"   : "2016-08-28",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.04,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         11: {
             "police_no"     : 5,
@@ -169,7 +205,11 @@ class LocalData(Data):
             "damage_type"   : "Teilkasko",
             "damage_kind"   : "Elementar",
             "damage_reason" : "Hagel",
-            "damage_date"   : "2016-08-28"
+            "damage_date"   : "2016-08-28",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.36,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         12: {
             "police_no"     : 6,
@@ -177,7 +217,11 @@ class LocalData(Data):
             "damage_type"   : "Teilkasko",
             "damage_kind"   : "Elementar",
             "damage_reason" : "Hagel",
-            "damage_date"   : "2016-08-28"
+            "damage_date"   : "2016-08-28",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.11,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         13: {
             "police_no"     : 1,
@@ -185,7 +229,11 @@ class LocalData(Data):
             "damage_type"   : "MF Haftpflicht",
             "damage_kind"   : "",
             "damage_reason" : "",
-            "damage_date"   : "2016-05-05"
+            "damage_date"   : "2016-05-05",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.44,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         14: {
             "police_no"     : 1,
@@ -193,7 +241,11 @@ class LocalData(Data):
             "damage_type"   : "Teilkasko",
             "damage_kind"   : "",
             "damage_reason" : "",
-            "damage_date"   : "2016-05-05"
+            "damage_date"   : "2016-05-05",
+            "ml_fraud"      : True,
+            "ml_prob"       : 0.54,
+            "rule_fraud"    : True,
+            "rule_reason"   : "Deckungseinschluss nach Schaden"
         },
         15: {
             "police_no"     : 2,
@@ -201,7 +253,11 @@ class LocalData(Data):
             "damage_type"   : "MF Haftpflicht",
             "damage_kind"   : "",
             "damage_reason" : "",
-            "damage_date"   : "2016-05-05"
+            "damage_date"   : "2016-05-05",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.01,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         16: {
             "police_no"     : 2,
@@ -209,7 +265,11 @@ class LocalData(Data):
             "damage_type"   : "Teilkasko",
             "damage_kind"   : "",
             "damage_reason" : "",
-            "damage_date"   : "2016-05-05"
+            "damage_date"   : "2016-05-05",
+            "ml_fraud"      : True,
+            "ml_prob"       : 0.99,
+            "rule_fraud"    : True,
+            "rule_reason"   : "Deckungseinschluss nach Schaden"
         },
         17: {
             "police_no"     : 3,
@@ -217,7 +277,11 @@ class LocalData(Data):
             "damage_type"   : "MF Haftpflicht",
             "damage_kind"   : "",
             "damage_reason" : "",
-            "damage_date"   : "2016-05-05"
+            "damage_date"   : "2016-05-05",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.27,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         18: {
             "police_no"     : 3,
@@ -225,7 +289,11 @@ class LocalData(Data):
             "damage_type"   : "Teilkasko",
             "damage_kind"   : "",
             "damage_reason" : "",
-            "damage_date"   : "2016-05-05"
+            "damage_date"   : "2016-05-05",
+            "ml_fraud"      : True,
+            "ml_prob"       : 0.76,
+            "rule_fraud"    : False,
+            "rule_reason"   : "Deckungseinschluss nach Schaden"
         },
         19: {
             "police_no"     : 3,
@@ -233,7 +301,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-10-09"
+            "damage_date"   : "2016-10-09",
+            "ml_fraud"      : True,
+            "ml_prob"       : 0.86,
+            "rule_fraud"    : True,
+            "rule_reason"   : "Zu viele Schaeden in der letzten Zeit"
         },
         20: {
             "police_no"     : 3,
@@ -241,7 +313,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-10-05"
+            "damage_date"   : "2016-10-05",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.42,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         21: {
             "police_no"     : 3,
@@ -249,7 +325,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2015-01-03"
+            "damage_date"   : "2015-01-03",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.12,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         22: {
             "police_no"     : 3,
@@ -257,7 +337,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-01-09"
+            "damage_date"   : "2016-01-09",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.33,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         23: {
             "police_no"     : 3,
@@ -265,7 +349,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-02-09"
+            "damage_date"   : "2016-02-09",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.12,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         },
         24: {
             "police_no"     : 3,
@@ -273,7 +361,11 @@ class LocalData(Data):
             "damage_type"   : "einfacher Diebstahl",
             "damage_kind"   : "Kombiversicherung Privathaushalt",
             "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-10-05"
+            "damage_date"   : "2016-10-05",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.03,
+            "rule_fraud"    : False,
+            "rule_reason"   : ""
         }
     }
 
