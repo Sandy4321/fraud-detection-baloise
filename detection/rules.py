@@ -23,7 +23,7 @@ class RuleDetection:
     # key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     def hagel(self, damage):
         # Would access fields with Data.getTime(damage) and Data.getLocation(damage)
-        return hagelmap[damage]
+        return self.hagelmap[damage]
 
     # This method, given the attributes of a newly issued "Schadensmeldung",
     # will use a prototype set of "hand-crafted" decision rules to classify
