@@ -74,6 +74,3 @@ def svcRBFGridsearch(X, y, Test):
     print 'Best Score of Grid Search: ' + str(grid_search.best_score_)
     print 'Best Params of Grid Search: ' + str(grid_search.best_params_)
 
-if __name__ == '__main__':
-    print 'Not yet implemented'
-        
