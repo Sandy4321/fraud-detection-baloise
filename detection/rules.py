@@ -45,7 +45,7 @@ class RuleDetection:
         if Data.shouldCheckforIphone(damage):
              # Check if the issue date is within 10 days of
              # the release date of the Iphone 7
-             date_obj = datetime.strptime(damage.data['SDERDAT'],'%Y-%m-%d')
+             date_obj = datetime.strptime(Data.getDate(damage),'%Y-%m-%d')
              iphonerelease = datetime.strptime('2016-09-16', '%Y-%m-%d')
              delta = date_obj - iphonerelease
              if abs(delta.days) <= 10:
@@ -54,8 +54,7 @@ class RuleDetection:
                  return False
 
         # Rule for "Deckungseinschluss"
-        # TODO: Implement this case
-        # if datamodule.
+        # not implemented
 
 
         # Rule for too many "Schadensfaelle"
