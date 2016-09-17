@@ -40,7 +40,7 @@ class RuleDetection:
             if (not self.hagel(damage)):
                 return True, 'Es gab gar keinen Hagel zu dieser Zeit an diesem Ort!'
             else:
-                return False, 'muy'
+                return False, ''
 
         # Rule for Iphone
         if myData.shouldCheckforIphone(damage):
@@ -50,9 +50,9 @@ class RuleDetection:
              iphonerelease = datetime.strptime('2016-09-16', '%Y-%m-%d')
              delta = date_obj - iphonerelease
              if abs(delta.days) <= 10:
-                 return True
+                 return True, 'Schadensmeldung nahe an Iphone 7 release'
              else:
-                 return False
+                 return False, ''
 
         # Rule for "Deckungseinschluss"
         # not implemented
@@ -63,4 +63,4 @@ class RuleDetection:
 	    myData.numberOfDamagesWithinLastTwoYears(damage) > 5):
             return True, 'Zu viele Schaeden in der letzten Zeit'
         else:
-            return False, 'muy'
+            return False, ''
