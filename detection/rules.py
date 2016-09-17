@@ -61,6 +61,6 @@ class RuleDetection:
         # Rule for too many "Schadensfaelle"
 	if (myData.shouldCheckForTooManyDamages(damage) and
 	    myData.numberOfDamagesWithinLastTwoYears(damage) > 5):
-            return True, 'Zu viele Schäden in der letzten Zeit'
+            return True, 'Zu viele Schaeden in der letzten Zeit'
         else:
             return False, 'muy'
