@@ -16,7 +16,7 @@ class RequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             handle_newdamagecase(self, content_len, "POST")
         elif self.path == "/enterpono":
             handle_enterpono(self, content_len, "POST")
-        elif self.path == "/personinfo":
+        elif "personinfo" in self.path:
             handle_personinfo(self, content_len, "POST")
         else:
             handle_404(self)
