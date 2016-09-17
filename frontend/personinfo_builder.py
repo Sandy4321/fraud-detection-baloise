@@ -1,4 +1,4 @@
-from data.data_access import LocalData as Data
+from data.data_access import StaticLocalData as Data
 
 class PersonInfoBuilder():
 
@@ -45,22 +45,22 @@ class PersonInfoBuilder():
                   "<html lang=\"en\">" \
                     "<head>"  \
                     "<meta charset=\"UTF-8\">"  \
-                    "<title>New damage case</title>"  \
+                    "<title>Personal Information</title>"  \
                     "<link rel=\"stylesheet\" href=\"bootstrap.css\">"  \
                     "</head>"  \
                     "<body>"  \
+                    "<a href=\"/newdamagecase\">Neuen Schaden erfassen</a>" \
                     "<table>"
 
     html_footer = ""
 
     def buildPersonInfo(self, police):
-        data = Data()
-        person_data = data.customers[int(police)]
-        print (person_data["name"])
+        #data = Data()
+        person_data = Data.customers[int(police)]
         self.person_table_rows = self.person_table_rows.format(**person_data)
-        damages = data.customers[int(police)]["damage_cases"]
+        damages = Data.customers[int(police)]["damage_cases"]
         for damage in damages:
-            damage_case = data.damage_cases[damage]
+            damage_case = Data.damage_cases[damage]
             if damage_case["ml_fraud"]:
                 damage_case["ml_color"] = "#FF0000"
             else:

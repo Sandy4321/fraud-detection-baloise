@@ -44,21 +44,24 @@ class LocalData(Data):
             "name"          : "Rudolf Moor",
             "birthday"      : "1993-02-17",
             "address"       : "Stigliweg 14, Lyss",
-            "damage_cases"  : [1, 7, 13, 14],
+            # "damage_cases"  : [1, 7, 13, 14],
+            "damage_cases"  : [7, 13, 14],
             "police"        : 1
         },
         2: {
             "name"          : "Stefan Ruchti",
             "birthday"      : "1987-04-17",
             "address"       : "Blumenweg 2, Basel",
-            "damage_cases"  : [2, 8, 15, 16],
+            # "damage_cases"  : [2, 8, 15, 16],
+            "damage_cases": [2, 15, 16],
             "police"        : 2
         },
         3: {
             "name"          : "Jonas Jatsch",
             "birthday"      : "1970-04-23",
             "address"       : "Hauptstrasse 2, Bern",
-            "damage_cases"  : [3, 9, 17, 18, 19, 20, 21, 22, 23, 24],
+            # "damage_cases"  : [3, 9, 17, 18, 19, 20, 21, 22, 23, 24],
+            "damage_cases": [ 9, 17, 18, 20, 21, 22, 23, 24],
             "police"        : 3
         },
         4: {
@@ -85,19 +88,19 @@ class LocalData(Data):
     }
 
     damage_cases = {
-        1: {
-            "police_no"     : 1,
-            "damage_group"  : "Wertsachen",
-            "damage_type"   : "einfacher Diebstahl",
-            "damage_kind"   : "Kombiversicherung Privathaushalt",
-            "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-09-10",
-            "ml_fraud"      : True,
-            "ml_prob"       : 0.87,
-            "rule_fraud"    : True,
-            "rule_reason"   : "Schadensmeldung nahe am iPhone 7 Release",
-            "damage_no"     : 1
-        },
+        # 1: {
+        #     "police_no"     : 1,
+        #     "damage_group"  : "Wertsachen",
+        #     "damage_type"   : "einfacher Diebstahl",
+        #     "damage_kind"   : "Kombiversicherung Privathaushalt",
+        #     "damage_reason" : "einfacher Diebstahl",
+        #     "damage_date"   : "2016-09-10",
+        #     "ml_fraud"      : True,
+        #     "ml_prob"       : 0.87,
+        #     "rule_fraud"    : True,
+        #     "rule_reason"   : "Schadensmeldung nahe am iPhone 7 Release",
+        #     "damage_no"     : 1
+        # },
         2: {
             "police_no"     : 2,
             "damage_group"  : "Wertsachen",
@@ -111,19 +114,19 @@ class LocalData(Data):
             "rule_reason"   : "",
             "damage_no"     : 2
         },
-        3: {
-            "police_no"     : 3,
-            "damage_group"  : "Wertsachen",
-            "damage_type"   : "einfacher Diebstahl",
-            "damage_kind"   : "Kombiversicherung Privathaushalt",
-            "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2014-06-05",
-            "ml_fraud"      : False,
-            "ml_prob"       : 0.12,
-            "rule_fraud"    : False,
-            "rule_reason"   : "",
-            "damage_no"     : 3
-        },
+        # 3: {
+        #     "police_no"     : 3,
+        #     "damage_group"  : "Wertsachen",
+        #     "damage_type"   : "einfacher Diebstahl",
+        #     "damage_kind"   : "Kombiversicherung Privathaushalt",
+        #     "damage_reason" : "einfacher Diebstahl",
+        #     "damage_date"   : "2014-06-05",
+        #     "ml_fraud"      : False,
+        #     "ml_prob"       : 0.12,
+        #     "rule_fraud"    : False,
+        #     "rule_reason"   : "",
+        #     "damage_no"     : 3
+        # },
         4: {
             "police_no"     : 4,
             "damage_group"  : "Wertsachen",
@@ -176,19 +179,19 @@ class LocalData(Data):
             "rule_reason"   : "",
             "damage_no"     : 7
         },
-        8: {
-            "police_no"     : 2,
-            "damage_group"  : "MF Kasko",
-            "damage_type"   : "Teilkasko",
-            "damage_kind"   : "Elementar",
-            "damage_reason" : "Hagel",
-            "damage_date"   : "2016-08-28",
-            "ml_fraud"      : True,
-            "ml_prob"       : 0.94,
-            "rule_fraud"    : True,
-            "rule_reason"   : "Es gab keinen Hagel zu dieser Zeit an diesem Ort",
-            "damage_no"     : 8
-        },
+        # 8: {
+        #     "police_no"     : 2,
+        #     "damage_group"  : "MF Kasko",
+        #     "damage_type"   : "Teilkasko",
+        #     "damage_kind"   : "Elementar",
+        #     "damage_reason" : "Hagel",
+        #     "damage_date"   : "2016-08-28",
+        #     "ml_fraud"      : True,
+        #     "ml_prob"       : 0.94,
+        #     "rule_fraud"    : True,
+        #     "rule_reason"   : "Es gab keinen Hagel zu dieser Zeit an diesem Ort",
+        #     "damage_no"     : 8
+        # },
         9: {
             "police_no"     : 3,
             "damage_group"  : "MF Kasko",
@@ -319,19 +322,19 @@ class LocalData(Data):
             "rule_reason"   : "Deckungseinschluss nach Schaden",
             "damage_no"     : 18
         },
-        19: {
-            "police_no"     : 3,
-            "damage_group"  : "Wertsachen",
-            "damage_type"   : "einfacher Diebstahl",
-            "damage_kind"   : "Kombiversicherung Privathaushalt",
-            "damage_reason" : "einfacher Diebstahl",
-            "damage_date"   : "2016-10-09",
-            "ml_fraud"      : True,
-            "ml_prob"       : 0.86,
-            "rule_fraud"    : True,
-            "rule_reason"   : "Zu viele Schaeden in der letzten Zeit",
-            "damage_no"     : 19
-        },
+        # 19: {
+        #     "police_no"     : 3,
+        #     "damage_group"  : "Wertsachen",
+        #     "damage_type"   : "einfacher Diebstahl",
+        #     "damage_kind"   : "Kombiversicherung Privathaushalt",
+        #     "damage_reason" : "einfacher Diebstahl",
+        #     "damage_date"   : "2016-10-09",
+        #     "ml_fraud"      : True,
+        #     "ml_prob"       : 0.86,
+        #     "rule_fraud"    : True,
+        #     "rule_reason"   : "Zu viele Schaeden in der letzten Zeit",
+        #     "damage_no"     : 19
+        # },
         20: {
             "police_no"     : 3,
             "damage_group"  : "Wertsachen",
@@ -384,19 +387,19 @@ class LocalData(Data):
             "rule_reason"   : "",
             "damage_no"     : 23
         },
-        # 24: {
-        #     "police_no"     : 3,
-        #     "damage_group"  : "Wertsachen",
-        #     "damage_type"   : "einfacher Diebstahl",
-        #     "damage_kind"   : "Kombiversicherung Privathaushalt",
-        #     "damage_reason" : "einfacher Diebstahl",
-        #     "damage_date"   : "2016-10-05",
-        #     "ml_fraud"      : False,
-        #     "ml_prob"       : 0.03,
-        #     "rule_fraud"    : False,
-        #     "rule_reason"   : "",
-        #     "damage_no"     : 24
-        # }
+        24: {
+            "police_no"     : 3,
+            "damage_group"  : "Wertsachen",
+            "damage_type"   : "einfacher Diebstahl",
+            "damage_kind"   : "Kombiversicherung Privathaushalt",
+            "damage_reason" : "einfacher Diebstahl",
+            "damage_date"   : "2016-10-05",
+            "ml_fraud"      : False,
+            "ml_prob"       : 0.03,
+            "rule_fraud"    : False,
+            "rule_reason"   : "",
+            "damage_no"     : 24
+        }
     }
 
     def shouldCheckForHagelRule(self, damage):
@@ -422,10 +425,15 @@ class LocalData(Data):
         return case['damage_date']
 
     def numberOfDamagesWithinLastTwoYears(self, damage):
-        return (damage == 19)
+        if damage == 19:
+            return 10
+        else:
+            return 1
 
     def getBatch(self):
         return NotImplemented
 
     def printCurrentBatch(self):
         return NotImplemented
+
+StaticLocalData = LocalData()

@@ -11,7 +11,7 @@ class RequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 
         #Determine which handler to call
         if self.path == "/":
-            handle_root(self)
+            handle_enterpono(self)
         elif self.path == "/newdamagecase":
             handle_newdamagecase(self, content_len, "POST")
         elif self.path == "/enterpono":
@@ -25,7 +25,7 @@ class RequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 
         #Determine which handler to call
         if self.path == "/":
-            handle_root(self)
+            handle_enterpono(self)
         elif self.path == "/newdamagecase":
             handle_newdamagecase(self)
         elif self.path == "/enterpono":

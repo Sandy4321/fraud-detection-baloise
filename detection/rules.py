@@ -1,7 +1,7 @@
 from datetime import datetime #(sig)
 from datetime import timedelta
 
-from data.data_access import LocalData as Data
+from data.data_access import StaticLocalData as Data
 
 ################################
 # ASSUMPTIONS ABOUT ATTRIBUTES:#
@@ -32,7 +32,7 @@ class RuleDetection:
     # investigated by "Versicherungsmenschen"
     def isFraud(self, damage):
 
-        myData = Data()
+        myData = Data
 
         # Rule for Hagel
         if myData.shouldCheckForHagelRule(damage):

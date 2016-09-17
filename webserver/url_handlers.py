@@ -1,11 +1,12 @@
 from string import split
+from string import replace
 from detection.rules import RuleDetection
 #from detection.learn import LearnDetection as LearnDetection
 from detection.learn import FakeLearn as LearnDetection
 from frontend.personinfo_builder import PersonInfoBuilder
 
 #from data.data_access import DbData as Data
-from data.data_access import LocalData as Data
+from data.data_access import StaticLocalData as Data
 
 #Handle "/"
 def handle_root(request, content_len=0, type="GET"):
@@ -24,7 +25,12 @@ def handle_newdamagecase(request, content_len=0, type="GET"):
         form_data = request.rfile.read(content_len)
         parsed_data = read_form_data(form_data)
         damage_no = int(parsed_data["damage_no"])
-        parsed_data.pop("damage_no")
+        Data.damage_cases[damage_no] = parsed_data
+        Data.customers[int(parsed_data["police"])]["damage_cases"].append(damage_no)
+        for param in parsed_data:
+            string = parsed_data[param]
+            parsed_data[param] = replace(string, "+", " ")
+        #parsed_data.pop("damage_no")
 
         rule_detector = RuleDetection()
         (parsed_data["rule_fraud"], parsed_data["rule_reason"]) = rule_detector.isFraud(damage_no)
