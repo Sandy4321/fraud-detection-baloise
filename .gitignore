@@ -94,3 +94,4 @@ split_data/*
 
 # PyCharm
 .idea/*
+*.save
