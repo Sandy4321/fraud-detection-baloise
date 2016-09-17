@@ -44,37 +44,43 @@ class LocalData(Data):
             "name"          : "Rudolf Moor",
             "birthday"      : "1993-02-17",
             "address"       : "Stigliweg 14, Lyss",
-            "damage_cases"  : [1, 7, 13, 14]
+            "damage_cases"  : [1, 7, 13, 14],
+            "police"        : 1
         },
         2: {
             "name"          : "Stefan Ruchti",
             "birthday"      : "1987-04-17",
             "address"       : "Blumenweg 2, Basel",
-            "damage_cases"  : [2, 8, 15, 16]
+            "damage_cases"  : [2, 8, 15, 16],
+            "police"        : 2
         },
         3: {
             "name"          : "Jonas Jatsch",
             "birthday"      : "1970-04-23",
             "address"       : "Hauptstrasse 2, Bern",
-            "damage_cases"  : [3, 9, 17, 18, 19, 20, 21, 22, 23, 24]
+            "damage_cases"  : [3, 9, 17, 18, 19, 20, 21, 22, 23, 24],
+            "police"        : 3
         },
         4: {
             "name"          : "Barbara Blau",
             "birthday"      : "1992-08-25",
             "address"       : "Nidaugasse 3, Biel",
-            "damage_cases"  : [4, 10]
+            "damage_cases"  : [4, 10],
+            "police"        : 4
         },
         5: {
             "name"          : "Hans Herrmann",
             "birthday"      : "1962-01-01",
             "address"       : "Bernstrasse 4, Aarberg",
-            "damage_cases"  : [5, 11]
+            "damage_cases"  : [5, 11],
+            "police"        : 5
         },
         6: {
             "name"          : "Brigitte Meier",
             "birthday"      : "1974-01-17",
             "address"       : "Sonnmatte 4, Olten",
-            "damage_cases"  : [6, 12]
+            "damage_cases"  : [6, 12],
+            "police"        : 6
         }
     }
 
