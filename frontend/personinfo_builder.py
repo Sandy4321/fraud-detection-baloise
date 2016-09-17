@@ -4,9 +4,9 @@ class PersonInfoBuilder():
 
     person_table_headers =  "<tr>" \
                             "<th>Name</th>" \
-                            "<th>Birthday</th>" \
-                            "<th>Police</th>" \
-                            "<th>Address</th>" \
+                            "<th>Geburtstag</th>" \
+                            "<th>Policenummer</th>" \
+                            "<th>Adresse</th>" \
                             "</tr>"
 
     person_table_rows = "<tr>" \
@@ -17,14 +17,14 @@ class PersonInfoBuilder():
                         "</tr>"
 
     damage_table_headers = "<tr>" \
-                           "<th>Damage Number</th>" \
-                           "<th>Damage Group</th>" \
-                           "<th>Insurance Type</th>" \
-                           "<th>Damage Date</th>" \
-                           "<th>Damage Kind</th>" \
-                           "<th>Damage Reason</th>" \
-                           "<th>Feedback Rules</th>" \
-                           "<th>Feedback Learning</th>" \
+                           "<th>Schadennumnmber</th>" \
+                           "<th>Versicherungsartengruppe</th>" \
+                           "<th>Versicherungsart</th>" \
+                           "<th>Schadendatum</th>" \
+                           "<th>Schadenart</th>" \
+                           "<th>Schadenursache</th>" \
+                           "<th>Feedback Vorlagekriterien</th>" \
+                           "<th>Feedback Machine Learning</th>" \
                            "</tr>"
 
     damage_table_rows_format = "<tr>" \
