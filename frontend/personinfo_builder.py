@@ -10,10 +10,10 @@ class PersonInfoBuilder():
                             "</tr>"
 
     person_table_rows = "<tr>" \
-                        "<td>{{name}}</td>" \
-                        "<td>{{birthday}}</td>" \
-                        "<td>{{police}}</td>" \
-                        "<td>{{address}}</td>" \
+                        "<td>{name}</td>" \
+                        "<td>{birthday}</td>" \
+                        "<td>{police}</td>" \
+                        "<td>{address}</td>" \
                         "</tr>"
 
     damage_table_headers = "<tr>" \
@@ -28,14 +28,14 @@ class PersonInfoBuilder():
                            "</tr>"
 
     damage_table_rows_format = "<tr>" \
-                               "<td>{{damage_no}}</td>" \
-                               "<td>{{damage_group}}</td>" \
-                               "<td>{{damage_type}}</td>" \
-                               "<td>{{damage_date}}</td>" \
-                               "<td>{{damage_kind}}</td>" \
-                               "<td>{{damage_reason}}</td>" \
-                               "<td bgcolor = \"{{rule_color}}\">{{rule_reason}}</td>" \
-                               "<td bgcolor = \"{{ml_color}}\">{{ml_prob}}</td>" \
+                               "<td>{damage_no}</td>" \
+                               "<td>{damage_group}</td>" \
+                               "<td>{damage_type}</td>" \
+                               "<td>{damage_date}</td>" \
+                               "<td>{damage_kind}</td>" \
+                               "<td>{damage_reason}</td>" \
+                               "<td bgcolor = \"{rule_color}\">{rule_reason}</td>" \
+                               "<td bgcolor = \"{ml_color}\">{ml_prob}</td>" \
                                "</tr>"
 
     damage_table_rows = ""
@@ -57,7 +57,7 @@ class PersonInfoBuilder():
         data = Data()
         person_data = data.customers[int(police)]
         print (person_data["name"])
-        self.person_table_rows = self.person_table_rows.format(person_data)
+        self.person_table_rows = self.person_table_rows.format(**person_data)
         damages = data.customers[int(police)]["damage_cases"]
         for damage in damages:
             damage_case = data.damage_cases[damage]
@@ -71,7 +71,7 @@ class PersonInfoBuilder():
             else:
                 damage_case["rule_color"] = "#00FF00"
 
-            self.damage_table_rows += self.damage_table_rows_format.format(damage_case)
+            self.damage_table_rows += self.damage_table_rows_format.format(**damage_case)
 
     def toString(self):
         return self.html_header + \
