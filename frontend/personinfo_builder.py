@@ -19,7 +19,7 @@ class PersonInfoBuilder():
     damage_table_headers = "<tr>" \
                            "<th>Damage Number</th>" \
                            "<th>Damage Group</th>" \
-                           "<th>Damage Type</th>" \
+                           "<th>Insurance Type</th>" \
                            "<th>Damage Date</th>" \
                            "<th>Damage Kind</th>" \
                            "<th>Damage Reason</th>" \
