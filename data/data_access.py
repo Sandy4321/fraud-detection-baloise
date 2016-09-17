@@ -47,7 +47,6 @@ class LocalData(Data):
         }
     }
 
-    #TODO: Generate all damage cases
     damage_cases = {
         1: {
             "police_no"     : 1,
@@ -59,33 +58,140 @@ class LocalData(Data):
             "police_no"     : 2,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
-            "damage_date"   : "2016-05-10"
+            "damage_date"   : "2016-10-05"
         },
         3: {
             "police_no"     : 3,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
-            "damage_date"   : "2014-05-06"
+            "damage_date"   : "2014-06-05"
         },
         4: {
             "police_no"     : 4,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
-            "damage_date"   : "2014-04-09"
+            "damage_date"   : "2014-09-04"
         },
         5: {
             "police_no"     : 5,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
-            "damage_date"   : "2016-03-06"
+            "damage_date"   : "2016-06-03"
         },
         6: {
             "police_no"     : 6,
             "damage_group"  : "Wertsachen",
             "damage_type"   : "einfacher Diebstahl",
-            "damage_date"   : "2015-01-02"
+            "damage_date"   : "2015-02-01"
         },
-
+        7: {
+            "police_no"     : 1,
+            "damage_group"  : "MF Kasko",
+            "damage_type"   : "Hagel",
+            "damage_date"   : "2016-08-28"
+        },
+        8: {
+            "police_no"     : 2,
+            "damage_group"  : "MF Kasko",
+            "damage_type"   : "Hagel",
+            "damage_date"   : "2016-08-28"
+        },
+        9: {
+            "police_no"     : 3,
+            "damage_group"  : "MF Kasko",
+            "damage_type"   : "Hagel",
+            "damage_date"   : "2016-08-28"
+        },
+        10: {
+            "police_no"     : 4,
+            "damage_group"  : "MF Kasko",
+            "damage_type"   : "Hagel",
+            "damage_date"   : "2016-08-28"
+        },
+        11: {
+            "police_no"     : 5,
+            "damage_group"  : "MF Kasko",
+            "damage_type"   : "Hagel",
+            "damage_date"   : "2016-08-28"
+        },
+        12: {
+            "police_no"     : 6,
+            "damage_group"  : "MF Kasko",
+            "damage_type"   : "Hagel",
+            "damage_date"   : "2016-08-28"
+        },
+        13: {
+            "police_no"     : 1,
+            "damage_group"  : "MF Haftpflicht",
+            "damage_type"   : "-",
+            "damage_date"   : "2016-05-05"
+        },
+        14: {
+            "police_no"     : 1,
+            "damage_group"  : "MF Kasko",
+            "damage_type"   : "-",
+            "damage_date"   : "2016-05-05"
+        },
+        15: {
+            "police_no"     : 2,
+            "damage_group"  : "MF Haftpflicht",
+            "damage_type"   : "-",
+            "damage_date"   : "2016-05-05"
+        },
+        16: {
+            "police_no"     : 2,
+            "damage_group"  : "MF Kasko",
+            "damage_type"   : "-",
+            "damage_date"   : "2016-05-05"
+        },
+        17: {
+            "police_no"     : 3,
+            "damage_group"  : "MF Haftpflicht",
+            "damage_type"   : "-",
+            "damage_date"   : "2016-05-05"
+        },
+        18: {
+            "police_no"     : 3,
+            "damage_group"  : "MF Kasko",
+            "damage_type"   : "-",
+            "damage_date"   : "2016-05-05"
+        },
+        19: {
+            "police_no"     : 3,
+            "damage_group"  : "Wertsachen",
+            "damage_type"   : "einfacher Diebstahl",
+            "damage_date"   : "2016-10-09"
+        },
+        20: {
+            "police_no"     : 3,
+            "damage_group"  : "Wertsachen",
+            "damage_type"   : "einfacher Diebstahl",
+            "damage_date"   : "2016-10-05"
+        },
+        21: {
+            "police_no"     : 3,
+            "damage_group"  : "Wertsachen",
+            "damage_type"   : "einfacher Diebstahl",
+            "damage_date"   : "2015-01-03"
+        },
+        22: {
+            "police_no"     : 3,
+            "damage_group"  : "Wertsachen",
+            "damage_type"   : "einfacher Diebstahl",
+            "damage_date"   : "2016-01-09"
+        },
+        23: {
+            "police_no"     : 3,
+            "damage_group"  : "Wertsachen",
+            "damage_type"   : "einfacher Diebstahl",
+            "damage_date"   : "2016-02-09"
+        },
+        24: {
+            "police_no"     : 3,
+            "damage_group"  : "Wertsachen",
+            "damage_type"   : "einfacher Diebstahl",
+            "damage_date"   : "2016-10-05"
+        }
     }
 
     def shouldCheckForHagelRule(self, damage):
